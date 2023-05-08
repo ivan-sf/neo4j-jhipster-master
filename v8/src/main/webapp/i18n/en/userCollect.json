@@ -1,0 +1,28 @@
+{
+  "v4App": {
+    "userCollect": {
+      "home": {
+        "title": "User Collects",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new User Collect",
+        "createOrEditLabel": "Create or edit a User Collect",
+        "notFound": "No User Collects found"
+      },
+      "created": "A new User Collect is created with identifier {{ param }}",
+      "updated": "A User Collect is updated with identifier {{ param }}",
+      "deleted": "A User Collect is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete User Collect {{ id }}?"
+      },
+      "detail": {
+        "title": "User Collect"
+      },
+      "id": "ID",
+      "name": "Name",
+      "lastName": "Last Name",
+      "username": "Username",
+      "vitalKey": "Vital Key",
+      "wearable": "Wearable"
+    }
+  }
+}

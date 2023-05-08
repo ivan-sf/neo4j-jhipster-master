@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20230508153512",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "user_collect",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "username",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vitalKey",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UserCollect",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "wearable",
+      "otherEntityRelationshipName": "userCollect",
+      "ownerSide": true,
+      "relationshipName": "wearable",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}
