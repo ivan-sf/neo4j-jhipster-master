@@ -1,0 +1,169 @@
+package com.be4tech.b4collectneo.domain;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Property;
+import org.springframework.data.neo4j.core.schema.Relationship;
+import org.springframework.data.neo4j.core.support.UUIDStringGenerator;
+
+/**
+ * A UserCollect.
+ */
+@Node
+@SuppressWarnings("common-java:DuplicatedBlocks")
+public class UserCollect implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(UUIDStringGenerator.class)
+    private String id;
+
+    @Property("name")
+    private String name;
+
+    @Property("last_name")
+    private String lastName;
+
+    @Property("username")
+    private String username;
+
+    @Property("vital_key")
+    private String vitalKey;
+
+    @Relationship("HAS_VITAL_KEY")
+    @JsonIgnoreProperties(value = { "vitalKey" }, allowSetters = true)
+    private Set<DataVital> vitalKeys = new HashSet<>();
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here
+
+    public String getId() {
+        return this.id;
+    }
+
+    public UserCollect id(String id) {
+        this.setId(id);
+        return this;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public UserCollect name(String name) {
+        this.setName(name);
+        return this;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public UserCollect lastName(String lastName) {
+        this.setLastName(lastName);
+        return this;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getUsername() {
+        return this.username;
+    }
+
+    public UserCollect username(String username) {
+        this.setUsername(username);
+        return this;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getVitalKey() {
+        return this.vitalKey;
+    }
+
+    public UserCollect vitalKey(String vitalKey) {
+        this.setVitalKey(vitalKey);
+        return this;
+    }
+
+    public void setVitalKey(String vitalKey) {
+        this.vitalKey = vitalKey;
+    }
+
+    public Set<DataVital> getVitalKeys() {
+        return this.vitalKeys;
+    }
+
+    public void setVitalKeys(Set<DataVital> dataVitals) {
+        if (this.vitalKeys != null) {
+            this.vitalKeys.forEach(i -> i.setVitalKey(null));
+        }
+        if (dataVitals != null) {
+            dataVitals.forEach(i -> i.setVitalKey(this));
+        }
+        this.vitalKeys = dataVitals;
+    }
+
+    public UserCollect vitalKeys(Set<DataVital> dataVitals) {
+        this.setVitalKeys(dataVitals);
+        return this;
+    }
+
+    public UserCollect addVitalKey(DataVital dataVital) {
+        this.vitalKeys.add(dataVital);
+        return this;
+    }
+
+    public UserCollect removeVitalKey(DataVital dataVital) {
+        this.vitalKeys.remove(dataVital);
+        return this;
+    }
+
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof UserCollect)) {
+            return false;
+        }
+        return id != null && id.equals(((UserCollect) o).id);
+    }
+
+    @Override
+    public int hashCode() {
+        // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+        return getClass().hashCode();
+    }
+
+    // prettier-ignore
+    @Override
+    public String toString() {
+        return "UserCollect{" +
+            "id=" + getId() +
+            ", name='" + getName() + "'" +
+            ", lastName='" + getLastName() + "'" +
+            ", username='" + getUsername() + "'" +
+            ", vitalKey='" + getVitalKey() + "'" +
+            "}";
+    }
+}

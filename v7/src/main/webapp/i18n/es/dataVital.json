@@ -1,0 +1,28 @@
+{
+  "v7App": {
+    "dataVital": {
+      "home": {
+        "title": "Data Vitals",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Data Vital",
+        "createOrEditLabel": "Crear o editar Data Vital",
+        "notFound": "Ningún Data Vitals encontrado"
+      },
+      "created": "Un nuevo Data Vital ha sido creado con el identificador {{ param }}",
+      "updated": "Un Data Vital ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Data Vital ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Data Vital {{ id }}?"
+      },
+      "detail": {
+        "title": "Data Vital"
+      },
+      "id": "ID",
+      "date": "Date",
+      "data": "Data",
+      "eventType": "Event Type",
+      "vitalKey": "Vital Key",
+      "vitalKey": "Vital Key"
+    }
+  }
+}

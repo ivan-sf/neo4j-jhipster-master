@@ -1,0 +1,152 @@
+package com.be4tech.b4collectneo.domain;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
+import java.time.Instant;
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Property;
+import org.springframework.data.neo4j.core.schema.Relationship;
+import org.springframework.data.neo4j.core.support.UUIDStringGenerator;
+
+/**
+ * A DataVital.
+ */
+@Node
+@SuppressWarnings("common-java:DuplicatedBlocks")
+public class DataVital implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(UUIDStringGenerator.class)
+    private String id;
+
+    @Property("date")
+    private Instant date;
+
+    @Property("data")
+    private String data;
+
+    @Property("event_type")
+    private String eventType;
+
+    @Property("vital_key")
+    private String vitalKey;
+
+    @Relationship(value = "HAS_VITAL_KEY", direction = Relationship.Direction.INCOMING)
+    @JsonIgnoreProperties(value = { "vitalKeys" }, allowSetters = true)
+    private UserCollect vitalKey;
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here
+
+    public String getId() {
+        return this.id;
+    }
+
+    public DataVital id(String id) {
+        this.setId(id);
+        return this;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Instant getDate() {
+        return this.date;
+    }
+
+    public DataVital date(Instant date) {
+        this.setDate(date);
+        return this;
+    }
+
+    public void setDate(Instant date) {
+        this.date = date;
+    }
+
+    public String getData() {
+        return this.data;
+    }
+
+    public DataVital data(String data) {
+        this.setData(data);
+        return this;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    public DataVital eventType(String eventType) {
+        this.setEventType(eventType);
+        return this;
+    }
+
+    public void setEventType(String eventType) {
+        this.eventType = eventType;
+    }
+
+    public String getVitalKey() {
+        return this.vitalKey;
+    }
+
+    public DataVital vitalKey(String vitalKey) {
+        this.setVitalKey(vitalKey);
+        return this;
+    }
+
+    public void setVitalKey(String vitalKey) {
+        this.vitalKey = vitalKey;
+    }
+
+    public UserCollect getVitalKey() {
+        return this.vitalKey;
+    }
+
+    public void setVitalKey(UserCollect userCollect) {
+        this.vitalKey = userCollect;
+    }
+
+    public DataVital vitalKey(UserCollect userCollect) {
+        this.setVitalKey(userCollect);
+        return this;
+    }
+
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof DataVital)) {
+            return false;
+        }
+        return id != null && id.equals(((DataVital) o).id);
+    }
+
+    @Override
+    public int hashCode() {
+        // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+        return getClass().hashCode();
+    }
+
+    // prettier-ignore
+    @Override
+    public String toString() {
+        return "DataVital{" +
+            "id=" + getId() +
+            ", date='" + getDate() + "'" +
+            ", data='" + getData() + "'" +
+            ", eventType='" + getEventType() + "'" +
+            ", vitalKey='" + getVitalKey() + "'" +
+            "}";
+    }
+}
