@@ -1,0 +1,8 @@
+{
+  "generator-jhipster:7.9.3": {
+    "promptValues": {
+      "packageName": "com.be4tech.be4collect",
+      "nativeLanguage": "es"
+    }
+  }
+}
