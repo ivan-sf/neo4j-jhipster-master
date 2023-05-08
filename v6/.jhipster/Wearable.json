@@ -1,0 +1,38 @@
+{
+  "applications": ["v4"],
+  "changelogDate": "20230508040021",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "wearable",
+  "fields": [
+    {
+      "fieldName": "nameWearable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Wearable",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "dataVital",
+      "otherEntityRelationshipName": "wearable",
+      "relationshipName": "dataVital",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "userCollect",
+      "otherEntityRelationshipName": "wearable",
+      "ownerSide": false,
+      "relationshipName": "userCollect",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,45 @@
+{
+  "applications": ["v4"],
+  "changelogDate": "20230508035821",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "data_vital",
+  "fields": [
+    {
+      "fieldName": "vitalKey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "eventType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "data",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "DataVital",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "wearable",
+      "otherEntityRelationshipName": "dataVital",
+      "relationshipName": "wearable",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "userCollect",
+      "otherEntityRelationshipName": "dataVital",
+      "relationshipName": "userCollect",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,27 @@
+{
+  "v4App": {
+    "wearable": {
+      "home": {
+        "title": "Wearables",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Wearable",
+        "createOrEditLabel": "Crear o editar Wearable",
+        "notFound": "Ningún Wearables encontrado"
+      },
+      "created": "Un nuevo Wearable ha sido creado con el identificador {{ param }}",
+      "updated": "Un Wearable ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Wearable ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Wearable {{ id }}?"
+      },
+      "detail": {
+        "title": "Wearable"
+      },
+      "id": "ID",
+      "nameWearable": "Name Wearable",
+      "type": "Type",
+      "dataVital": "Data Vital",
+      "userCollect": "User Collect"
+    }
+  }
+}

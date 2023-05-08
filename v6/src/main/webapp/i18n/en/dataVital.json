@@ -1,0 +1,29 @@
+{
+  "v4App": {
+    "dataVital": {
+      "home": {
+        "title": "Data Vitals",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Data Vital",
+        "createOrEditLabel": "Create or edit a Data Vital",
+        "notFound": "No Data Vitals found"
+      },
+      "created": "A new Data Vital is created with identifier {{ param }}",
+      "updated": "A Data Vital is updated with identifier {{ param }}",
+      "deleted": "A Data Vital is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Data Vital {{ id }}?"
+      },
+      "detail": {
+        "title": "Data Vital"
+      },
+      "id": "ID",
+      "vitalKey": "Vital Key",
+      "eventType": "Event Type",
+      "date": "Date",
+      "data": "Data",
+      "wearable": "Wearable",
+      "userCollect": "User Collect"
+    }
+  }
+}
