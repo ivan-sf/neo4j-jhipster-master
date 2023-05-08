@@ -44,7 +44,11 @@ spring:
   neo4j:
     pool:
       metrics-enabled: true
-    uri: bolt://localhost:7687
+     uri: neo4j+s://06186317.databases.neo4j.io
+    # Uncomment to use an authenticated connection
+    authentication:
+      username: neo4j
+      password: l_8kcEguOrD7Y1nuaJKfWQnu_JIub0uUCjbTbwDPQLo
     # Uncomment to use an authenticated connection
     # authentication:
     #   username: neo4j
